@@ -1,0 +1,150 @@
+{
+  "summary": {
+    "files": 10,
+    "ok": 9,
+    "issues": 14
+  },
+  "files": [
+    {
+      "file": "demo/samples/big_int.json",
+      "ok": true,
+      "issues": []
+    },
+    {
+      "file": "demo/samples/bom.json",
+      "ok": true,
+      "issues": [
+        {
+          "type": "bom_removed",
+          "line": 1,
+          "column": 1,
+          "detail": "UTF-8 byte order mark removed"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/comments.json",
+      "ok": true,
+      "issues": [
+        {
+          "type": "comment_removed",
+          "line": 2,
+          "column": 3,
+          "detail": "line comment removed"
+        },
+        {
+          "type": "comment_removed",
+          "line": 3,
+          "column": 11,
+          "detail": "block comment removed"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/duplicate_keys.json",
+      "ok": true,
+      "issues": [
+        {
+          "type": "duplicate_key",
+          "line": 1,
+          "column": 2,
+          "detail": "duplicate key 'id' appears 3 times; kept the last value"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/long_line.json",
+      "ok": true,
+      "issues": []
+    },
+    {
+      "file": "demo/samples/missing_brace.json",
+      "ok": false,
+      "issues": [
+        {
+          "type": "missing_closing_bracket",
+          "line": 5,
+          "column": 1,
+          "detail": "missing closing '}'"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/nan_infinity.json",
+      "ok": true,
+      "issues": [
+        {
+          "type": "nan_to_null",
+          "line": 1,
+          "column": 7,
+          "detail": "NaN is not valid JSON; replaced with null"
+        },
+        {
+          "type": "infinity_to_null",
+          "line": 1,
+          "column": 17,
+          "detail": "Infinity is not valid JSON; replaced with null"
+        },
+        {
+          "type": "infinity_to_null",
+          "line": 1,
+          "column": 32,
+          "detail": "-Infinity is not valid JSON; replaced with null"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/single_quotes.json",
+      "ok": true,
+      "issues": [
+        {
+          "type": "single_quoted_string",
+          "line": 1,
+          "column": 2,
+          "detail": "single-quoted string converted to double-quoted string"
+        },
+        {
+          "type": "single_quoted_string",
+          "line": 1,
+          "column": 9,
+          "detail": "single-quoted string converted to double-quoted string"
+        },
+        {
+          "type": "single_quoted_string",
+          "line": 1,
+          "column": 18,
+          "detail": "single-quoted string converted to double-quoted string"
+        },
+        {
+          "type": "single_quoted_string",
+          "line": 1,
+          "column": 24,
+          "detail": "single-quoted string converted to double-quoted string"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/trailing_comma.json",
+      "ok": true,
+      "issues": [
+        {
+          "type": "trailing_comma",
+          "line": 1,
+          "column": 20,
+          "detail": "trailing comma before ']' removed"
+        },
+        {
+          "type": "trailing_comma",
+          "line": 1,
+          "column": 22,
+          "detail": "trailing comma before '}' removed"
+        }
+      ]
+    },
+    {
+      "file": "demo/samples/valid.json",
+      "ok": true,
+      "issues": []
+    }
+  ]
+}

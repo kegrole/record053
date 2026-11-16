@@ -1,0 +1,4 @@
+{
+  "name": "demo",
+  "tags": ["a", "b"],
+  "meta": {"x": 1}
